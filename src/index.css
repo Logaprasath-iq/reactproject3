@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#131129] text-white font-poppins;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar matching dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131129;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #F5F6FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2755;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6F4FF2;
+}
+
+/* Glassmorphism and glows */
+.glass-effect {
+  background: rgba(29, 25, 50, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.light .glass-effect {
+  background: rgba(255, 255, 255, 0.85);
+}
